@@ -55,12 +55,22 @@ public class RoutingEntry {
         this.hops = hops;
     }
 
+    /**
+     * Converts the RoutingEntry to a string for debugging purposes
+     * 
+     * @return string
+     */
     public String toString() {
         return "RoutingEntry(info_source=" + java.util.Arrays.toString(this.info_source) + ", destination="
                 + java.util.Arrays.toString(this.destination) + ", ip=" + java.util.Arrays.toString(this.ip) + ", port="
                 + this.port + ", hops=" + this.hops + ")";
     }
 
+    /**
+     * Converts the RoutingEntry to a byte array
+     * 
+     * @return byte array
+     */
     public byte[] toBytes() {
         byte[] bytes = new byte[15];
         bytes[0] = (byte) this.info_source[0];
@@ -78,6 +88,12 @@ public class RoutingEntry {
         return bytes;
     }
 
+    /**
+     * Converts a byte array to a RoutingEntry
+     * 
+     * @param bytes byte array
+     * @return RoutingEntry
+     */
     public static RoutingEntry fromBytes(byte[] bytes) {
         char[] info_source = new char[3];
         info_source[0] = (char) bytes[0];

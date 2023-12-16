@@ -39,6 +39,11 @@ public class ConnectionPacket {
         return "ConnectionPacket(name=" + java.util.Arrays.toString(this.name) + ", ip=" + java.util.Arrays.toString(this.ip) + ", isFirst=" + this.isFirst + ")";
     }
 
+    /**
+     * Converts the ConnectionPacket to bytes
+     * 
+     * @return String
+     */
     public byte[] toBytes() {
         byte[] bytes = new byte[12];
         bytes[0] = (byte) this.name[0];
@@ -52,6 +57,11 @@ public class ConnectionPacket {
         return bytes;
     }
 
+    /**
+     * Converts bytes to a ConnectionPacket
+     * 
+     * @return String
+     */
     public static ConnectionPacket fromBytes(byte[] bytes) {
         char[] name = new char[3];
         name[0] = (char) bytes[0];

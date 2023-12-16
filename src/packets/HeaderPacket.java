@@ -63,6 +63,11 @@ public class HeaderPacket {
         this.hops = hops;
     }
 
+    /**
+     * Converts the HeaderPacket to bytes
+     * 
+     * @return String
+     */
     public byte[] toBytes() {
         byte[] bytes = new byte[10];
         bytes[0] = type;
@@ -77,6 +82,11 @@ public class HeaderPacket {
         return bytes;
     }
 
+    /**
+     * Converts bytes to a HeaderPacket
+     * 
+     * @return String
+     */
     public static HeaderPacket fromBytes(byte[] bytes) {
         byte type = bytes[0];
         byte ttl = bytes[1];

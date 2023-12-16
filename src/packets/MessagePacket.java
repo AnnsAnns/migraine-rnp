@@ -15,6 +15,11 @@ public class MessagePacket {
         this.message = message;
     }
 
+    /**
+     * Converts the MessagePacket to bytes
+     * 
+     * @return String
+     */
     public byte[] toBytes() {
         byte[] bytes = new byte[320];
         for (int i = 0; i < 320; i++) {
@@ -23,6 +28,11 @@ public class MessagePacket {
         return bytes;
     }
 
+    /**
+     * Converts bytes to a MessagePacket
+     * 
+     * @return String
+     */
     public static MessagePacket fromBytes(byte[] bytes) {
         char[] message = new char[320];
         for (int i = 0; i < 320; i++) {
