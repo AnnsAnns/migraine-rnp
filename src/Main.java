@@ -1,5 +1,8 @@
+import components.Tui;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        // Start TUI as a new thread
+        new Thread(new Tui()).start();
     }
 }
