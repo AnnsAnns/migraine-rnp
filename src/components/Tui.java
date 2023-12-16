@@ -92,7 +92,6 @@ public class Tui implements Runnable {
 
     @Override
     public void run() {
-        // TODO Auto-generated method stub
         handleConsole();
     }
 }
